@@ -416,14 +416,13 @@ fieldset {
     margin: 0 0 .75em; }
   fieldset label {
     display: inline-block;
-    width: 20em; }
+    width: 25em; }
   fieldset input + label {
     display: inline;
     width: 100%; }
   fieldset input[type=text] {
-    max-width: 4em; }
-  fieldset input[type=color] {
-    max-width: 6em; }
+    max-width: 5em;
+    text-align: right; }
   fieldset legend {
     font-weight: bold;
     font-size: 1em;

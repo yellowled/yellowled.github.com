@@ -22,13 +22,15 @@
     <div role="main">
         <h2>Configure your user.css boilerplate</h2>
 
+        <p><strong>Hint:</strong> You don't <em>have</em> to add both layout types if you plan to only use one.</p>
+
         <form action="#" method="get">
             <fieldset>
                 <legend>Desktop layout (for resolutions &gt; 768px)</legend>
 
                 <div>
-                    <label for="max-width-cont">Maximum container width (1em = 16px)</label>
-                    <input id="max-width-cont" type="text" value="" placeholder="i.e. 70">
+                    <label for="max-width-cont">Maximum overall layout width (1em = 16px)</label>
+                    <input id="max-width-cont" type="text" value="" placeholder="default: 70">
                     <label for="max-unit-cont" class="visuallyhidden">Unit for maximum container width</label>
                     <select id="max-unit-cont">
                         <option value="em" selected>em</option>
@@ -37,8 +39,8 @@
                 </div>
             
                 <div>
-                    <label for="sidebar-width-2col">2-column sidebar width (both sidebars)</label>
-                    <input id="sidebar-width-2col" type="text" value="" placeholder="i.e. 25">
+                    <label for="sidebar-width-2col">2-column sidebar width (left or right sidebar)</label>
+                    <input id="sidebar-width-2col" type="text" value="" placeholder="default: 38">
                     <span>%</span>
                 </div>
 
@@ -48,8 +50,8 @@
                 </div>
             
                 <div>
-                    <label for="sidebar-width-3col">3-column sidebar width (both sidebars)</label>
-                    <input id="sidebar-width-3col" type="text" value="" placeholder="i.e. 25">
+                    <label for="sidebar-width-3col">3-column sidebar width (left and right sidebar)</label>
+                    <input id="sidebar-width-3col" type="text" value="" placeholder="default: 25">
                     <span>%</span>
                 </div>
 
