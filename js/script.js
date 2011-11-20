@@ -27,19 +27,20 @@ $(function() {
 		};
 
 		if(threecol) {
-			sbWidth3Col = $('#sidebar-width-3col').attr('value');
-			contWidth3Col = 100 - (2 * parseFloat(sbWidth3Col));
-			idWidth3Col = parseFloat(contWidth3Col) + parseFloat(sbWidth3Col);
+			sbWidth3ColL = $('#sidebar-width-3col-l').attr('value');
+			sbWidth3ColR = $('#sidebar-width-3col-r').attr('value');
+			contWidth3Col = 100 - parseFloat(sbWidth3ColL) - parseFloat(sbWidth3ColR);
+			idWidth3Col = parseFloat(contWidth3Col) + parseFloat(sbWidth3ColL);
 			// bp code
-			threeColBP = '\t.col3 #search,\n\t.col3 #sidebar_left,\n\t.col3 #sidebar_right { width: ' + sbWidth3Col + '%; }\n\n';
+			threeColBP = '\t.col3 #search,\n\t.col3 #sidebar_right { width: ' + sbWidth3ColR + '%; }\n\n';
+			threeColBP += '\t.col3 #sidebar_left {\n\t\tleft: -' + contWidth3Col + '%;\n\t\twidth: ' + sbWidth3ColL + '%;\n\t}\n\n';
 			threeColBP += '\t.col3 #identity { width: ' + idWidth3Col + '%; }\n\n';
-			threeColBP += '\t.col3 #content {\n\t\tleft: ' + sbWidth3Col + '%;\n\t\twidth: ' + contWidth3Col + '%;\n\t}\n\n';
-			threeColBP += '\t.col3 #sidebar_left { left: -' + contWidth3Col + '%; }\n\n';
+			threeColBP += '\t.col3 #content {\n\t\tleft: ' + sbWidth3ColL + '%;\n\t\twidth: ' + contWidth3Col + '%;\n\t}\n\n';
 			// IE7 fixes
-			threeColBP += '\t.ie7 .col3 #search,\n\t.ie7 .col3 #sidebar_left,\n\t.ie7 .col3 #sidebar_right { width: ' + (parseFloat(sbWidth3Col) - 0.1) + '%; }\n\n';
+			threeColBP += '\t.ie7 .col3 #search,\n\t.ie7 .col3 #sidebar_right { width: ' + (parseFloat(sbWidth3ColR) - 0.1) + '%; }\n\n';
+			threeColBP += '\t.ie7 .col3 #sidebar_left {\n\t\tleft: -' + (parseFloat(contWidth3Col) - 0.1) + '%;\n\t\twidth: ' + (parseFloat(sbWidth3ColL)) + '%;\n\t}\n';
 			threeColBP += '\t.ie7 .col3 #identity { width: ' + (parseFloat(idWidth3Col) - 0.1) + '%; }\n\n';
-			threeColBP += '\t.ie7 .col3 #content {\n\t\tleft: ' + (parseFloat(sbWidth3Col) - 0.1) + '%;\n\t\twidth: ' + (parseFloat(contWidth3Col) - 0.1) + '%;\n\t}\n\n';
-			threeColBP += '\t.ie7 .col3 #sidebar_left { left: -' + (parseFloat(contWidth3Col) - 0.1) + '%; }\n';
+			threeColBP += '\t.ie7 .col3 #content {\n\t\tleft: ' + (parseFloat(sbWidth3ColL) - 0.1) + '%;\n\t\twidth: ' + (parseFloat(contWidth3Col) - 0.1) + '%;\n\t}\n\n';
 		};
 
 		userCSS = '';
