@@ -368,6 +368,7 @@ footer > small {
   margin: 0 0 2em; }
 
 input[type=text],
+input[type=color],
 textarea {
   border: 1px solid #aaa;
   padding: 2px 3px;
@@ -418,6 +419,9 @@ fieldset {
     width: 100%; }
   fieldset input[type=text] {
     max-width: 5em;
+    text-align: right; }
+  fieldset input[type=color] {
+    max-width: 7.5em;
     text-align: right; }
   fieldset legend {
     font-weight: bold;

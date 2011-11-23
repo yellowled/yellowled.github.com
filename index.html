@@ -22,7 +22,7 @@
     <div role="main">
         <h2>Configure your user.css boilerplate</h2>
 
-        <p><strong>Hint:</strong> You don't <em>have</em> to add both layout types if you plan to only use one.</p>
+        <p><strong>Hint:</strong> You don't <em>have</em> to add both layout types if you plan to only use one. Please make sure to insert sensible values in the form fields. The generator does <strong>not</strong> check the values you enter. Also note that a stylesheet generated automagically like this one will most likely look a bit dull compared to a handcrafted one. Especially the color scheme will most likely merely be a starting point due to the limitations of the (or <em>any</em>, for that matter) generator.</p>
 
         <form action="#" method="get">
             <fieldset>
@@ -64,6 +64,60 @@
                 <div>
                     <input id="include-3col" type="checkbox" value="">
                     <label for="include-3col">Include 3-column layout in user.css</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Color scheme</legend>
+
+                <div>
+                    <label for="bg-color-page">Content background color</label>
+                    <input id="bg-color-page" type="color" value="" placeholder="default: #fcfcfc">
+                </div>
+
+                <div>
+                    <label for="fg-color-page">Content text color</label>
+                    <input id="fg-color-page" type="color" value="" placeholder="default: #222">
+                </div>
+
+                <div>
+                    <label for="bg-color-body">Page background color</label>
+                    <input id="bg-color-body" type="color" value="" placeholder="default: #ddd">
+                </div>
+
+                <div>
+                    <label for="bg-color-navi">Navigation background color</label>
+                    <input id="bg-color-navi" type="color" value="" placeholder="default: #294564">
+                </div>
+
+                <div>
+                    <label for="fg-color-navi">Navigation text color</label>
+                    <input id="fg-color-navi" type="color" value="" placeholder="default: #fff">
+                </div>
+
+                <div>
+                    <label for="bg-hover-navi">Navigation hover background color</label>
+                    <input id="bg-hover-navi" type="color" value="" placeholder="default: #aabcc5">
+                </div>
+
+                <div>
+                    <label for="fg-hover-navi">Navigation hover text color</label>
+                    <input id="fg-hover-navi" type="color" value="" placeholder="default: #000">
+                </div>
+
+                <div>
+                    <label for="fg-color-link">Normal link text color</label>
+                    <input id="fg-color-link" type="color" value="" placeholder="default: #3e5f81">
+                </div>
+
+                <div>
+                    <label for="fg-hover-link">Hover link text color</label>
+                    <input id="fg-hover-link" type="color" value="" placeholder="default: #d52">
+                </div>
+
+                <div>
+                    <input id="include-colors" type="checkbox" value="">
+                    <label for="include-colors">Include color scheme in user.css</label>
                 </div>
             </fieldset>
 
