@@ -9,7 +9,7 @@
     <meta name="author" content="Matthias Mees">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link  rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@
                         <option value="px">px</option>}
                     </select>
                 </div>
-            
+
                 <div>
                     <label for="sidebar-width-2col">2-column sidebar width (left or right sidebar)</label>
                     <input id="sidebar-width-2col" type="text" value="" placeholder="default: 38">
@@ -48,7 +48,7 @@
                     <input id="include-2col" type="checkbox" value="">
                     <label for="include-2col">Include 2-column layout in user.css</label>
                 </div>
-            
+
                 <div>
                     <label for="sidebar-width-3col-l">3-column sidebar width (left sidebar)</label>
                     <input id="sidebar-width-3col-l" type="text" value="" placeholder="default: 25">
@@ -68,7 +68,7 @@
             </fieldset>
 
             <fieldset>
-                <legend>Color scheme</legend>
+                <legend>Basic color scheme</legend>
 
                 <div>
                     <label for="bg-color-page">Content background color</label>
@@ -86,8 +86,32 @@
                 </div>
 
                 <div>
+                    <label for="fg-color-link">Normal link text color</label>
+                    <input id="fg-color-link" type="color" value="" placeholder="default: #3e5f81">
+                </div>
+
+                <div>
+                    <label for="fg-hover-link">Hover link text color</label>
+                    <input id="fg-hover-link" type="color" value="" placeholder="default: #d52">
+                </div>
+
+                <div>
+                    <input id="include-basic" type="checkbox" value="">
+                    <label for="include-basic">Include basic color scheme in user.css</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Navigation color scheme</legend>
+
+                <div>
                     <label for="bg-color-navi">Navigation background color</label>
                     <input id="bg-color-navi" type="color" value="" placeholder="default: #294564">
+                </div>
+
+                <div>
+                    <label for="bg-color-navi-2">2<sup>nd</sup> Navigation background color</label>
+                    <input id="bg-color-navi-2" type="color" value="" placeholder="default: #3e5f81">
                 </div>
 
                 <div>
@@ -101,23 +125,18 @@
                 </div>
 
                 <div>
+                    <label for="bg-hover-navi-2">2<sup>nd</sup> Navigation hover background color</label>
+                    <input id="bg-hover-navi-2" type="color" value="" placeholder="default: #ccdee7">
+                </div>
+
+                <div>
                     <label for="fg-hover-navi">Navigation hover text color</label>
                     <input id="fg-hover-navi" type="color" value="" placeholder="default: #000">
                 </div>
 
                 <div>
-                    <label for="fg-color-link">Normal link text color</label>
-                    <input id="fg-color-link" type="color" value="" placeholder="default: #3e5f81">
-                </div>
-
-                <div>
-                    <label for="fg-hover-link">Hover link text color</label>
-                    <input id="fg-hover-link" type="color" value="" placeholder="default: #d52">
-                </div>
-
-                <div>
-                    <input id="include-colors" type="checkbox" value="">
-                    <label for="include-colors">Include color scheme in user.css</label>
+                    <input id="include-navi" type="checkbox" value="">
+                    <label for="include-navi">Include nav color scheme in user.css</label>
                 </div>
             </fieldset>
 
@@ -137,7 +156,7 @@
     <footer role="contentinfo">
         <small><a href="http://github.com/yellowled/s9y-2k11">2k11</a> user.css generator built by <a href="http://yellowled.de">Matthias Mees</a>.</small>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <script defer src="js/script.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script defer src="js/script.min.js"></script>
 </body>
 </html>
