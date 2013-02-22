@@ -1,166 +1,182 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!DOCTYPE html>
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>2k11 user.css Generator</title>
-    <meta name="author" content="Matthias Mees">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link  rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/modernizr-2.0.6.min.js"></script>
+    <title>2k11 user.css generator</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="styles/dff9411b.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="styles/620bc9e1.css">
+<!--<![endif]-->
+    <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
-    <header id="top" role="banner">
-        <h1>2k11 user.css Generator</h1>
+<body id="top">
+<!--[if lt IE 8]> <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p> <![endif]-->
+<p id="jshint" class="chromeframe">For full functionality of this site it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com/">instructions how to enable JavaScript in your web browser</a>.</p>
+    <header>
+        <h1>2k11 user.css generator</h1>
 
         <p>2k11 offers the possibility to include an optional user.css file to make it easy to tweak the template to your liking. This file is also safe in case of an update since it is <strong>not</strong> part of the original template, so it will <strong>not</strong> be overwritten.</p>
     </header>
 
-    <div role="main">
-        <h2>Configure your user.css boilerplate</h2>
+    <main>
+        <article>
+            <h2>Configure your user.css boilerplate</h2>
 
-        <p><strong>Hint:</strong> You don't <em>have</em> to add both layout types if you plan to only use one. Please make sure to insert sensible values in the form fields. The generator does <strong>not</strong> check the values you enter. Also note that a stylesheet generated automagically like this one will most likely look a bit dull compared to a handcrafted one. Especially the color scheme will most likely merely be a starting point due to the limitations of the (or <em>any</em>, for that matter) generator.</p>
+            <p><strong>Hint:</strong> You don't <em>have</em> to add both layout types if you plan to only use one. In fact, it will unnecessarily blow up your user.css. Please make sure to enter sensible values in the form fields. The generator does <strong>not</strong> check the values you enter.</p>
 
-        <form action="#" method="get">
-            <fieldset>
-                <legend>Desktop layout (for resolutions &gt; 768px)</legend>
+            <p>Also note that a stylesheet generated automagically like this one will most likely look a bit dull compared to a handcrafted one. Especially the color scheme will most likely merely be a starting point due to the limitations of the (or <em>any</em>, for that matter) generator.</p>
 
-                <div>
-                    <label for="max-width-cont">Maximum overall layout width (1em = 16px)</label>
-                    <input id="max-width-cont" type="text" value="" placeholder="default: 70">
-                    <label for="max-unit-cont" class="visuallyhidden">Unit for maximum container width</label>
-                    <select id="max-unit-cont">
-                        <option value="em" selected>em</option>
-                        <option value="px">px</option>}
-                    </select>
-                </div>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend><span>Desktop layout (for resolutions &gt; 768px)</span></legend>
 
-                <div>
-                    <label for="sidebar-width-2col">2-column sidebar width (left or right sidebar)</label>
-                    <input id="sidebar-width-2col" type="text" value="" placeholder="default: 38">
-                    <span>%</span>
-                </div>
+                    <div>
+                        <label for="max-width-cont">Maximum overall layout width <span>(1em = 16px)</span></label>
+                        <input id="max-width-cont" type="text" value="" placeholder="default: 70">
 
-                <div>
-                    <input id="include-2col" type="checkbox" value="">
-                    <label for="include-2col">Include 2-column layout in user.css</label>
-                </div>
+                        <label for="max-unit-cont" class="visuallyhidden">Unit for maximum container width</label>
+                        <select id="max-unit-cont">
+                            <option value="em" selected>em</option>
+                            <option value="px">px</option>}
+                        </select>
+                    </div>
 
-                <div>
-                    <label for="sidebar-width-3col-l">3-column sidebar width (left sidebar)</label>
-                    <input id="sidebar-width-3col-l" type="text" value="" placeholder="default: 25">
-                    <span>%</span>
-                </div>
+                    <div>
+                        <label for="sidebar-width-2col">2-column sidebar width <span>(left or right sidebar)</span></label>
+                        <input id="sidebar-width-2col" type="text" value="" placeholder="default: 38">
+                        <span>%</span>
+                    </div>
 
-                <div>
-                    <label for="sidebar-width-3col-r">3-column sidebar width (right sidebar)</label>
-                    <input id="sidebar-width-3col-r" type="text" value="" placeholder="default: 25">
-                    <span>%</span>
-                </div>
+                    <div>
+                        <input id="include-2col" type="checkbox" value="">
+                        <label for="include-2col">Include 2-column layout in user.css</label>
+                    </div>
 
-                <div>
-                    <input id="include-3col" type="checkbox" value="">
-                    <label for="include-3col">Include 3-column layout in user.css</label>
-                </div>
-            </fieldset>
+                    <div>
+                        <label for="sidebar-width-3col-l">3-column sidebar width (left sidebar)</label>
+                        <input id="sidebar-width-3col-l" type="text" value="" placeholder="default: 25">
+                        <span>%</span>
+                    </div>
 
-            <fieldset>
-                <legend>Basic color scheme</legend>
+                    <div>
+                        <label for="sidebar-width-3col-r">3-column sidebar width (right sidebar)</label>
+                        <input id="sidebar-width-3col-r" type="text" value="" placeholder="default: 25">
+                        <span>%</span>
+                    </div>
 
-                <div>
-                    <label for="bg-color-page">Content background color</label>
-                    <input id="bg-color-page" type="color" value="" placeholder="default: #fcfcfc">
-                </div>
+                    <div>
+                        <input id="include-3col" type="checkbox" value="">
+                        <label for="include-3col">Include 3-column layout in user.css</label>
+                    </div>
+                </fieldset>
 
-                <div>
-                    <label for="fg-color-page">Content text color</label>
-                    <input id="fg-color-page" type="color" value="" placeholder="default: #222">
-                </div>
+                <fieldset>
+                    <legend><span>Basic color scheme</span></legend>
 
-                <div>
-                    <label for="bg-color-body">Page background color</label>
-                    <input id="bg-color-body" type="color" value="" placeholder="default: #ddd">
-                </div>
+                    <div>
+                        <label for="bg-color-page">Content background color</label>
+                        <input id="bg-color-page" class="colorpicker" type="text" value="" placeholder="default: #fcfcfc">
+                    </div>
 
-                <div>
-                    <label for="fg-color-link">Normal link text color</label>
-                    <input id="fg-color-link" type="color" value="" placeholder="default: #3e5f81">
-                </div>
+                    <div>
+                        <label for="fg-color-page">Content text color</label>
+                        <input id="fg-color-page" class="colorpicker" type="text" value="" placeholder="default: #222">
+                    </div>
 
-                <div>
-                    <label for="fg-hover-link">Hover link text color</label>
-                    <input id="fg-hover-link" type="color" value="" placeholder="default: #d52">
-                </div>
+                    <div>
+                        <label for="bg-color-body">Page background color</label>
+                        <input id="bg-color-body" class="colorpicker" type="text" value="" placeholder="default: #ddd">
+                    </div>
 
-                <div>
-                    <input id="include-basic" type="checkbox" value="">
-                    <label for="include-basic">Include basic color scheme in user.css</label>
-                </div>
-            </fieldset>
+                    <div>
+                        <label for="fg-color-link">Normal link text color</label>
+                        <input id="fg-color-link" class="colorpicker" type="text" value="" placeholder="default: #3e5f81">
+                    </div>
 
-            <h3>CSS3 gradients support</h3>
+                    <div>
+                        <label for="fg-hover-link">Hover link text color</label>
+                        <input id="fg-hover-link" class="colorpicker" type="text" value="" placeholder="default: #d52">
+                    </div>
 
-            <p>If you enter the 2<sup>nd</sup> nav colors, the generator will generate CSS3 gradient backgrounds for the navigation just like 2k11 uses by default. This will add a subtle plastic feel to the navigation. As to how to pick these colors, 2k11 by default uses colors which are a tad lighter than the 1<sup>st</sup> colors. It's hard to give you a ballpark value here, but about 10-15% lighter should do the trick. Note that these gradients will <em>only</em> be added to the generated user.css if you actually <strong>enter</strong> a 2<sup>nd</sup> color. You'll probably want to provide 2<sup>nd</sup> colors for both nav and hovered nav.</p>
+                    <div>
+                        <input id="include-basic" type="checkbox" value="">
+                        <label for="include-basic">Include basic color scheme in user.css</label>
+                    </div>
+                </fieldset>
 
-            <fieldset>
-                <legend>Navigation color scheme</legend>
+                <h3>CSS3 gradients support</h3>
 
-                <div>
-                    <label for="bg-color-navi">Navigation background color</label>
-                    <input id="bg-color-navi" type="color" value="" placeholder="default: #294564">
-                </div>
+                <p>If you enter the 2<sup>nd</sup> nav colors, the generator will add CSS3 gradient backgrounds for the navigation just like 2k11 uses by default. This will add a subtle plastic feel to the navigation.</p>
 
-                <div>
-                    <label for="bg-color-navi-2">2<sup>nd</sup> navigation background color</label>
-                    <input id="bg-color-navi-2" type="color" value="" placeholder="default: #3e5f81">
-                </div>
+                <p>As to how to pick these colors, 2k11 by default uses colors which are a tad lighter than the 1<sup>st</sup> colors. It's hard to give you a ballpark value here, but about 10-15% lighter should do the trick. You can also use the <b>Fill</b>-Button to propagate the 2<sup>nd</sup> color with a (roughly) suitable value.</p>
 
-                <div>
-                    <label for="fg-color-navi">Navigation text color</label>
-                    <input id="fg-color-navi" type="color" value="" placeholder="default: #fff">
-                </div>
+                <p>Note that these gradients will <em>only</em> be added to the generated user.css if you actually <strong>enter</strong> a 2<sup>nd</sup> color. You'll probably want to provide 2<sup>nd</sup> colors for both nav and hovered nav.</p>
 
-                <div>
-                    <label for="bg-hover-navi">Navigation hover background color</label>
-                    <input id="bg-hover-navi" type="color" value="" placeholder="default: #aabcc5">
-                </div>
+                <fieldset>
+                    <legend><span>Navigation color scheme</span></legend>
 
-                <div>
-                    <label for="bg-hover-navi-2">2<sup>nd</sup> navigation hover background color</label>
-                    <input id="bg-hover-navi-2" type="color" value="" placeholder="default: #ccdee7">
-                </div>
+                    <div>
+                        <label for="bg-color-navi">Navigation background color</label>
+                        <input id="bg-color-navi" class="colorpicker" type="text" value="" placeholder="default: #294564">
+                    </div>
 
-                <div>
-                    <label for="fg-hover-navi">Navigation hover text color</label>
-                    <input id="fg-hover-navi" type="color" value="" placeholder="default: #000">
-                </div>
+                    <div>
+                        <label for="bg-color-navi-2">2<sup>nd</sup> navigation background color</label>
+                        <input id="bg-color-navi-2" class="colorpicker" type="text" value="" placeholder="default: #3e5f81">
+                        <input id="lighten-color-2" type="button" value="Fill">
+                    </div>
 
-                <div>
-                    <input id="include-navi" type="checkbox" value="">
-                    <label for="include-navi">Include nav color scheme in user.css</label>
-                </div>
-            </fieldset>
+                    <div>
+                        <label for="fg-color-navi">Navigation text color</label>
+                        <input id="fg-color-navi" class="colorpicker" type="text" value="" placeholder="default: #fff">
+                    </div>
 
-            <input type="submit" value="Generate user.css">
-            <input type="reset" value="Reset form">
-        </form>
+                    <div>
+                        <label for="bg-hover-navi">Navigation hover background color</label>
+                        <input id="bg-hover-navi" class="colorpicker" type="text" value="" placeholder="default: #aabcc5">
+                    </div>
 
-        <section>
+                    <div>
+                        <label for="bg-hover-navi-2">2<sup>nd</sup> navigation hover background color</label>
+                        <input id="bg-hover-navi-2" class="colorpicker" type="text" value="" placeholder="default: #ccdee7">
+                        <input id="lighten-hover-2" type="button" value="Fill">
+                    </div>
+
+                    <div>
+                        <label for="fg-hover-navi">Navigation hover text color</label>
+                        <input id="fg-hover-navi" class="colorpicker" type="text" value="" placeholder="default: #000">
+                    </div>
+
+                    <div>
+                        <input id="include-navi" type="checkbox" value="">
+                        <label for="include-navi">Include nav color scheme in user.css</label>
+                    </div>
+                </fieldset>
+
+                <input type="submit" value="Generate user.css">
+                <input type="reset" value="Reset form">
+            </form>
+
             <h2>Your user.css boilerplate code</h2>
 
             <p>Copy and paste this section into your user.css. Remember you need to <em>create</em> that file and upload it to the template directory as well as explicitly activate it in the theme options.</p>
 
             <textarea id="boilerplate"></textarea>
-        </section>
-    </div>
+        </article>
+    </main>
 
-    <footer role="contentinfo">
-        <small><a href="http://github.com/yellowled/s9y-2k11">2k11</a> user.css generator built by <a href="http://yellowled.de">Matthias Mees</a>.</small>
+    <footer>
+        <p><a href="http://github.com/yellowled/s9y-2k11">2k11</a> user.css generator by <a href="http://yellowled.de">Matthias Mees</a>.</p>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script defer src="js/script.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="scripts/75344144.js"></script>
 </body>
 </html>
